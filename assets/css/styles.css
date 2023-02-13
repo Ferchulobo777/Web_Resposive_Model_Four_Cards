@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+:root{
+/*Primary*/
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+/*Neutral*/
+--Very_Dark_Blue: hsl(234, 12%, 34%);
+--Grayish_Blue: hsl(229, 6%, 66%);
+--Very_Light_Gray: hsl(0, 0%, 98%);
+--weight_light:200;
+--weight_regular:400;
+--weight_bold:600;
+}
+*,
+*::before,
+ *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+/*******************Reset***************/
+ body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+ h1, h2, p{
+    margin: 0;
+ }
+ /****************Mobile**************/
+ .body{
+    padding: 5rem 1.8rem;
+    background-color: var(--Very_Light_Gray);
+ }
+ .header{
+    margin-bottom: 3rem;
+ }
+ .principal__title{
+    font-size: 1.5rem;
+    font-weight: var(--weight_light);
+    color: var(--Very_Dark_Blue);
+    margin-bottom: 1rem;
+    text-align: center;
+ }
+ .principal__title__bold{
+    font-weight: var(--weight_bold);
+ }
+ .principal__text{
+    color: var(--Grayish_Blue);
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1rem;
+ }
+ .card__container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+ }
+ .card {
+    width: min(100%, 300px);
+    padding: 20px;
+    background-color: white;
+    border-top: 4px solid var(--Cyan);
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 hsla(234, 12%, 34%, 20%)
+ }
+ .card__title{
+   color: var(--Very_Dark_Blue);
+   font-size: 1.2rem;
+   margin-bottom: 5px;
+ }
+ .card__text{
+    color: var(--Grayish_Blue);
+    font-size: 0.8rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+ }
+ .card__img{
+    width: 55px;
+    display: block;
+    margin: auto;
+ }
+ .card__red{
+  border-top-color: var(--Red);
+ }
+ .card__orange{
+    border-top-color: var(--Orange);
+ }
+ .card__blue{
+    border-top-color: var(--Blue);
+ }
+/********************Desktop******************/
+ @media screen and (min-width:1010px){
+    .card__container{
+        width: 950px;
+        margin-left: auto;
+        margin-right:auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .card:nth-child(1), .card:nth-child(4){
+        grid-row: span 2;
+        align-self: center;
+    }
+    .card:nth-child(3){
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+    }
+    
+ }
